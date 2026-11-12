@@ -1,34 +1,6 @@
 [
     {
-        "caption": "GPG: Decrypt",
-        "command": "gpg_decrypt"
-    },
-    {
-        "caption": "GPG: Encrypt",
-        "command": "gpg_encrypt"
-    },
-    {
-        "caption": "GPG: Sign",
-        "command": "gpg_sign"
-    },
-    {
-        "caption": "GPG: Sign and encrypt",
-        "command": "gpg_sign_and_encrypt"
-    },
-    {
-        "caption": "GPG: Verify signature",
-        "command": "gpg_verify"
-    },
-    {
-        "caption": "GPG: Readme",
-        "command": "gpg_readme"
-    },
-    {
-        "caption": "GPG: Changelog",
-        "command": "gpg_changelog"
-    },
-    {
-        "caption": "Preferences: GPG: Settings",
+        "caption": "Preferences: GPG Auto: Settings",
         "command": "edit_settings",
         "args":
         {
@@ -37,12 +9,19 @@
         }
     },
     {
-        "caption": "Preferences: GPG: Key Bindings",
-        "command": "edit_settings",
-        "args":
-        {
-            "base_file": "${packages}/GPG/input-maps/Default (${platform}).sublime-keymap",
-            "default": "[\n\t$0\n]\n"
-        }
+        "caption": "Preferences: GPG Auto: 说明文档",
+        "command": "gpg_readme"
+    },
+    {
+        "caption": "GPG: 加密为 .asc",
+        "command": "gpg_encrypt_file"
+    },
+    {
+        "caption": "GPG: .asc 签名",
+        "command": "gpg_toggle_sign"
+    },
+    {
+        "caption": "GPG: 明文签名",
+        "command": "gpg_clearsign_document"
     }
 ]

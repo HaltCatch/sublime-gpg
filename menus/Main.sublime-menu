@@ -1,39 +1,23 @@
 [
     {
-        "id": "tools",
+        "id": "file",
         "children":
         [
+            { "caption": "-" },
             {
-                "id": "gpg",
-                "caption": "GPG",
-                "children":
-                [
-                    {
-                        "id": "decrypt",
-                        "caption": "Decrypt",
-                        "command": "gpg_decrypt"
-                    },
-                    {
-                        "id": "encrypt",
-                        "caption": "Encrypt",
-                        "command": "gpg_encrypt"
-                    },
-                    {
-                        "id": "sign",
-                        "caption": "Sign",
-                        "command": "gpg_sign"
-                    },
-                    {
-                        "id": "sign_and_encrypt",
-                        "caption": "Sign and encrypt",
-                        "command": "gpg_sign_and_encrypt"
-                    },
-                    {
-                        "id": "verify",
-                        "caption": "Verify signature",
-                        "command": "gpg_verify"
-                    }
-                ]
+                "caption": "GPG: 加密为 .asc",
+                "command": "gpg_encrypt_file"
+            },
+            {
+                "caption": "GPG: .asc 签名",
+                "command": "gpg_toggle_sign"
+            },
+            {
+                "caption": "-"
+            },
+            {
+                "caption": "GPG: 明文签名",
+                "command": "gpg_clearsign_document"
             }
         ]
     },
@@ -46,34 +30,21 @@
                 "children":
                 [
                     {
-                        "caption": "GPG",
+                        "caption": "GPG Auto",
                         "children":
                         [
                             {
-                                "caption": "Readme",
+                                "caption": "说明文档",
                                 "command": "gpg_readme"
-                            },
-                            {
-                                "caption": "Changelog",
-                                "command": "gpg_changelog"
                             },
                             { "caption": "-" },
                             {
-                                "caption": "Settings",
+                                "caption": "配置文件",
                                 "command": "edit_settings",
                                 "args":
                                 {
-                                    "base_file": "${packages}/GPG/settings/gpg.sublime-settings",
+                                    "base_file": "${packages}/SublimeGPG/settings/gpg.sublime-settings",
                                     "default": "{\n\t$0\n}\n"
-                                }
-                            },
-                            {
-                                "caption": "Key Bindings",
-                                "command": "edit_settings",
-                                "args":
-                                {
-                                    "base_file": "${packages}/GPG/input-maps/Default (${platform}).sublime-keymap",
-                                    "default": "[\n\t$0\n]\n"
                                 }
                             }
                         ]

@@ -1,0 +1,51 @@
+[
+    {
+        "keys": [
+            "super+alt+e"
+        ],
+        "command": "gpg_encrypt_file"
+    },
+    {
+        "keys": [
+            "super+alt+s"
+        ],
+        "command": "gpg_toggle_sign"
+    },
+    {
+        "keys": [
+            "super+alt+c"
+        ],
+        "command": "gpg_clearsign_document"
+    },
+    {
+        "keys": [
+            "super+s"
+        ],
+        "command": "gpg_safe_save",
+        "context": [
+            {
+                "key": "gpg_protected_view",
+                "operator": "equal",
+                "operand": true
+            }
+        ]
+    },
+    {
+        "keys": [
+            "super+shift+s"
+        ],
+        "command": "gpg_safe_save",
+        "args": {
+            "native_args": {
+                "prompt": true
+            }
+        },
+        "context": [
+            {
+                "key": "gpg_protected_view",
+                "operator": "equal",
+                "operand": true
+            }
+        ]
+    }
+]

@@ -1,0 +1,16 @@
+[
+    { "caption": "-" },
+    {
+        "caption": "GPG: 加密为 .asc",
+        "command": "gpg_encrypt_file"
+    },
+    {
+        "caption": "GPG: .asc 签名",
+        "command": "gpg_toggle_sign"
+    },
+    { "caption": "-" },
+    {
+        "caption": "GPG: 明文签名",
+        "command": "gpg_clearsign_document"
+    }
+]

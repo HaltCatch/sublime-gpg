@@ -2,6 +2,5 @@
 #!/usr/bin/env python
 
 
-from .pc_events_notifier import *
 from .text_commands import *
-from .window_commands import *
+from .auto_gpg_listener import *
